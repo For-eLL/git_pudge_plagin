@@ -1,0 +1,36 @@
+{
+  "name": "vscode-onetouchgit",
+  "displayName": "OneTouchGit",
+  "description": "Выполняет git add, git commit и git push одним действием.",
+  "version": "0.0.1",
+  "publisher": "for-ell",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./love_me.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "onetouchgit.run",
+        "title": "One-Touch Git: add + commit + push",
+        "category": "OneTouchGit"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "onetouchgit.run",
+        "key": "ctrl+alt+g",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:onetouchgit.run"
+  ],
+  "devDependencies": {
+    "vsce": "^2.15.0"
+  }
+}
